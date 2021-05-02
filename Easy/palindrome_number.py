@@ -1,11 +1,11 @@
-Given an integer x, return true if x is palindrome integer.
+"""Given an integer x, return true if x is palindrome integer.
 
 An integer is a palindrome when it reads the same backward as forward. For example, 121 is palindrome while 123 is not.
 
 
 For this problem I gave two solutions. 
 
-In this first solution I use mathematics to reverse the string. 
+In this first solution I use mathematics to reverse the string. """
 def palNum(x):
     # We first initialize the reverse number variable and make a copy of the input. 
     revs_number = 0
@@ -23,11 +23,11 @@ def palNum(x):
     # Finally we check if the original input is equal to the reversed integer.
     return revs_number == a
 
-This second solution is very simple. 
+"""This second solution is very simple. 
 Turn the integer into a string and then check if the string is the same when its elements are reversed.
 The a[::-1] has the syntax "list[<start>:<stop>:<step>]". 
-So, when you do a[::-1], it starts from the end towards the first taking each element. So it reverses a.
-def palNum(x):
+So, when you do a[::-1], it starts from the end towards the first taking each element. So it reverses a. """
+def palN(x):
     a = str(x)
     return a == a[::-1]
 

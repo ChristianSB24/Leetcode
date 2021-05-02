@@ -1,11 +1,11 @@
-This solution was faster than 96.48% of all accepted solutions. Used less memory than 90.85% of all accepted solutions.
+"""This solution was faster than 96.48% of all accepted solutions. Used less memory than 90.85% of all accepted solutions.
 
 Given a signed 32-bit integer x, return x with its digits reversed. 
 If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
 
 Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
 
-Constraints:  -2**31 <= x <= 2**31 - 1
+Constraints:  -2**31 <= x <= 2**31 - 1 """
 
 def reverse(n):
     # Stringify integer so we can access elements of it.
