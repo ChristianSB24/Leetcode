@@ -1,3 +1,5 @@
+This solution was faster than 96.48% of all accepted solutions. Used less memory than 90.85% of all accepted solutions.
+
 Given a signed 32-bit integer x, return x with its digits reversed. 
 If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
 
@@ -19,4 +21,6 @@ def reverse(n):
         z = a[::-1]
     # We want to check if it satisfies the constraint. If it doesn't then return 0.
     if int(z) >= 2**31-1 or int(z) <= -2**31: return 0
+    # Very important to return the integer form of the string. Otherwise we would get things like 002 if the input was 200.
+    # Or for example -00005 if the input was -50000.
     return int(z)
