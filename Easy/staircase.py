@@ -1,3 +1,11 @@
+""" Faster than 92.77% of all Python submissions. Uses less storage than 72.40% than all Python submissions.
+You are climbing a staircase. It takes n steps to reach the top.
+
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? 
+
+Showed my work in the beginning section. Second solution is similar but less optimized. """
+
+
 # Input: n = 4
 # Output: 5
 # Explanation: There are three ways to climb to the top.
@@ -32,21 +40,27 @@
 # n = 5
 # 8 outcomes, + 8
 
-def stair(n):
-    prev = 0
-    prev2 = 0
-    for i in range(n):
-        if i == 0:
-            prev = 1
-        if i == (n - 1):
-            return prev + prev2
-        else:
-            total = prev + prev2
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        prev = 0
+        prev2 = 0
+        total = 1
+        for i in range(n):
             prev2 = prev
             prev = total
+            total = prev + prev2
+        return total 
 
-n = 6
-print(stair(n))
+# def stair(n):
+#     prev = 0
+#     prev2 = 0
+#     for i in range(n):
+#         if i == 0:
+#             prev = 1
+#         total = prev + prev2
+#         prev2 = prev
+#         prev = total  
+#     return prev + prev2  
 
 
 
