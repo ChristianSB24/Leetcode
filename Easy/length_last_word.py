@@ -28,17 +28,10 @@ A word is a maximal substring consisting of non-space characters only. """
 #             break
 #     return len(length)
 
-def lenWord(s):
-    s_list = s.strip().split(" ")
-    print(s_list)
-    l = len(s_list[len(s_list)-1])
-    return l
+# def lenWord(s):
+#     s_list = s.strip().split(" ")
+#     print(s_list)
+#     l = len(s_list[len(s_list)-1])
+#     return l
         
         
-
-s = "Hello World    "
-# s = " "
-# s = "a"
-# s = "a "
-
-print(lenWord(s))

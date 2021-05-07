@@ -5,7 +5,7 @@ You may assume that each input would have exactly one solution, and you may not 
 You can return the answer in any order. '''
 
 def twoSum(a, target):
-    # Initialize a directory to store values.
+    # Initialize a dictionary to store values.
     h = {}
     # Create dictionary from list. Want to create it before the loop so it is not recreated each cycle. 
     b = enumerate(a)

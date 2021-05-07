@@ -1,21 +1,25 @@
 """ Given an integer array nums, find the contiguous subarray (containing at least one number) 
     which has the largest sum and return its sum."""
 
+# def maxSub(nums):
+#     sums = []
+#     if len(nums) == 1:
+#         return nums[0]
+#     if all(x > -1 for x in nums):
+#         return sum(nums)
+#     if all(x < 0 for x in nums):
+#         return sum(nums)
+#     for i in range(len(nums)):
+#         counter = 1
+#         for x in range(len(nums)):
+#             if nums[i: x + counter] == []:
+#                 continue
+#             sums.append(sum(nums[i:x + counter]))
+#         counter += 1
+#     return max(sums)
+
 def maxSub(nums):
-    sums = []
-    if len(nums) == 1:
-        return nums[0]
-    if all(x > -1 for x in nums):
-        print('here')
-        return sum(nums)
-    for i in range(len(nums)):
-        counter = 1
-        for x in range(len(nums)):
-            if nums[i: x + counter] == []:
-                continue
-            sums.append(sum(nums[i:x + counter]))
-        counter += 1
-    return max(sums)
+    
 
 
 
