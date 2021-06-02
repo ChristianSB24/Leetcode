@@ -16,11 +16,11 @@
 #     return sorted(nums1)
 
 def mergeList(nums1, m, nums2, n):
-    for x in nums2:
-        for i in nums1:
+    counter = 0
+    for i in nums1:
+        for x in nums2:
             if x >= i:
-                nums1.insert(nums1.index(i), x)
-                break
+                nums1.insert(nums1.index(i ), x)
     return nums1
 
 nums1 = [1, 2, 3, 0, 0, 0]
